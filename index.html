@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Arena - India's Ultimate Free Fire Tournament App</title>
+<meta name="description" content="Download Prime Arena - India's #1 Free Fire tournament app. Win real cash prizes daily. 100% Safe & Secure.">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0a0e27;color:#fff;font-family:'Arial',sans-serif;overflow-x:hidden;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.navbar{position:fixed;top:0;left:0;right:0;background:rgba(13,18,48,0.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #2a2f4a;padding:15px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:bold;color:#ffa500}
+.nav-logo img{width:40px;height:40px;border-radius:50%;border:2px solid #ffa500}
+.nav-links{display:flex;gap:25px;align-items:center}
+.nav-links a{color:#ccc;text-decoration:none;font-size:14px;font-weight:bold;transition:.3s}
+.nav-links a:hover{color:#ffa500}
+.nav-download{background:linear-gradient(135deg,#00c853,#00e676);color:#fff !important;padding:10px 20px;border-radius:25px;font-size:13px !important}
+.hero{padding:120px 20px 60px;text-align:center;background:radial-gradient(circle at top, rgba(106,27,154,0.3), transparent 60%),radial-gradient(circle at bottom right, rgba(255,165,0,0.15), transparent 50%);position:relative;overflow:hidden}
+.hero-badge{display:inline-block;background:rgba(255,165,0,0.15);border:1px solid #ffa500;color:#ffa500;font-size:12px;font-weight:bold;padding:8px 18px;border-radius:25px;margin-bottom:20px;letter-spacing:1px}
+.hero h1{font-size:52px;font-weight:bold;line-height:1.1;margin-bottom:20px;background:linear-gradient(135deg,#fff,#ffa500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:18px;color:#ccc;max-width:600px;margin:0 auto 35px}
+.hero-buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.btn-download{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:linear-gradient(135deg,#00c853,#00e676);border:none;border-radius:50px;color:#fff;font-size:18px;font-weight:bold;cursor:pointer;text-decoration:none;box-shadow:0 10px 30px rgba(0,200,83,0.4);transition:.3s}
+.btn-download:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,200,83,0.6)}
+.btn-download:active{transform:scale(.97)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:18px 35px;background:transparent;border:2px solid #ffa500;border-radius:50px;color:#ffa500;font-size:16px;font-weight:bold;cursor:pointer;text-decoration:none;transition:.3s}
+.btn-secondary:hover{background:#ffa500;color:#0a0e27}
+.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:30px}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:32px;font-weight:bold;color:#ffa500}
+.hero-stat .lbl{font-size:12px;color:#888;letter-spacing:1px}
+.hero-visual{margin-top:50px;display:flex;justify-content:center}
+.phone-mock{width:280px;height:560px;background:#1a1f3a;border:8px solid #2a2f4a;border-radius:35px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 60px rgba(255,165,0,0.2);position:relative}
+.phone-screen{width:100%;height:100%;background:linear-gradient(180deg,#0a0e27,#1a1f3a);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px}
+.phone-logo{width:100px;height:100px;background:linear-gradient(135deg,#ff6b00,#ffa500);border-radius:25px;display:flex;justify-content:center;align-items:center;font-size:50px;margin-bottom:20px;box-shadow:0 0 40px rgba(255,165,0,0.5)}
+.phone-logo img{width:80px;height:80px;border-radius:20px}
+.phone-app-name{font-size:24px;font-weight:bold;color:#ffa500;letter-spacing:2px;margin-bottom:5px}
+.phone-tagline{font-size:11px;color:#888;letter-spacing:1px;text-align:center}
+.section{padding:80px 20px}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:38px;font-weight:bold;margin-bottom:12px}
+.section-title p{font-size:16px;color:#888;max-width:600px;margin:0 auto}
+.section-title .highlight{color:#ffa500}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.feature-card{background:#1a1f3a;border:1px solid #2a2f4a;border-radius:15px;padding:25px;transition:.3s}
+.feature-card:hover{transform:translateY(-5px);border-color:#ffa500;box-shadow:0 10px 30px rgba(255,165,0,0.1)}
+.feature-icon{width:60px;height:60px;background:linear-gradient(135deg,#ff6b00,#ffa500);border-radius:15px;display:flex;justify-content:center;align-items:center;font-size:28px;margin-bottom:18px}
+.feature-title{font-size:18px;font-weight:bold;margin-bottom:10px}
+.feature-desc{font-size:13px;color:#999;line-height:1.6}
+.trust-section{background:linear-gradient(135deg,rgba(0,200,83,0.1),rgba(255,165,0,0.1));border:1px solid #ffa500;border-radius:20px;padding:50px 30px;text-align:center;margin:40px 20px}
+.trust-section h2{font-size:32px;font-weight:bold;margin-bottom:15px;color:#ffa500}
+.trust-section p{font-size:16px;color:#ccc;margin-bottom:35px;max-width:700px;margin-left:auto;margin-right:auto}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;max-width:900px;margin:0 auto}
+.trust-item{text-align:center}
+.trust-item .icon{font-size:40px;margin-bottom:10px}
+.trust-item .lbl{font-size:13px;color:#fff;font-weight:bold}
+.how-to-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.step-card{background:#1a1f3a;border:1px solid #2a2f4a;border-radius:15px;padding:25px;text-align:center;position:relative}
+.step-num{position:absolute;top:-15px;left:50%;transform:translateX(-50%);width:35px;height:35px;background:linear-gradient(135deg,#ff6b00,#ffa500);border-radius:50%;display:flex;justify-content:center;align-items:center;font-weight:bold;font-size:16px;color:#fff;box-shadow:0 5px 15px rgba(255,165,0,0.4)}
+.step-icon{font-size:40px;margin:15px 0}
+.step-title{font-size:15px;font-weight:bold;margin-bottom:8px}
+.step-desc{font-size:12px;color:#888;line-height:1.5}
+.cta-section{text-align:center;padding:80px 20px}
+.cta-section h2{font-size:38px;font-weight:bold;margin-bottom:15px}
+.cta-section p{font-size:16px;color:#ccc;margin-bottom:30px}
+.cta-section .btn-download{font-size:20px;padding:22px 50px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.contact-card{background:#1a1f3a;border:1px solid #2a2f4a;border-radius:15px;padding:25px;text-align:center;text-decoration:none;color:#fff;transition:.3s}
+.contact-card:hover{transform:translateY(-5px);border-color:#ffa500}
+.contact-icon{width:60px;height:60px;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:28px;margin:0 auto 15px}
+.contact-icon.telegram{background:linear-gradient(135deg,#0088cc,#00aaff)}
+.contact-icon.instagram{background:linear-gradient(135deg,#f09433,#dc2743)}
+.contact-icon.whatsapp{background:linear-gradient(135deg,#25d366,#128c7e)}
+.contact-name{font-size:15px;font-weight:bold;margin-bottom:5px}
+.contact-desc{font-size:11px;color:#888}
+footer{background:#0d1230;padding:40px 20px;text-align:center;border-top:1px solid #2a2f4a}
+footer .f-links{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-bottom:20px}
+footer .f-links a{color:#999;text-decoration:none;font-size:13px}
+footer .f-links a:hover{color:#ffa500}
+footer .copy{font-size:12px;color:#666}
+@media(max-width:768px){
+.hero h1{font-size:36px}
+.hero p{font-size:16px}
+.section-title h2{font-size:28px}
+.cta-section h2{font-size:28px}
+.hero-stats{gap:25px}
+.hero-stat .num{font-size:24px}
+.phone-mock{width:240px;height:480px}
+.nav-links a:not(.nav-download){display:none}
+.nav-download{padding:8px 16px;font-size:12px !important}
+}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+<div class="container nav-inner">
+<div class="nav-logo">
+<img src="logo.png" alt="Prime Arena" onerror="this.style.display='none'">
+<span>PRIME ARENA</span>
+</div>
+<div class="nav-links">
+<a href="#features">Features</a>
+<a href="#how-to">How to Install</a>
+<a href="#contact">Contact</a>
+<a href="prime-arena.apk" download class="nav-download">⬇ DOWNLOAD</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="hero-badge">🇮🇳 INDIA'S #1 FREE FIRE ARENA</div>
+<h1>Play Free Fire.<br>Win Real Cash.</h1>
+<p>Join daily tournaments, compete with players across India, and win real money. 100% Safe & Secure platform with instant withdrawals.</p>
+<div class="hero-buttons">
+<a href="prime-arena.apk" download class="btn-download">
+<span>⬇</span> DOWNLOAD APK
+</a>
+<a href="#features" class="btn-secondary">Learn More</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat">
+<div class="num">10K+</div>
+<div class="lbl">Players</div>
+</div>
+<div class="hero-stat">
+<div class="num">₹5L+</div>
+<div class="lbl">Prizes Won</div>
+</div>
+<div class="hero-stat">
+<div class="num">24/7</div>
+<div class="lbl">Support</div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="phone-mock">
+<div class="phone-screen">
+<div class="phone-logo"><img src="logo.png" alt="Logo" onerror="this.style.display='none';this.parentElement.textContent='🎮'"></div>
+<div class="phone-app-name">PRIME ARENA</div>
+<div class="phone-tagline">INDIA'S ULTIMATE<br>FREE FIRE ARENA</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="features">
+<div class="container">
+<div class="section-title">
+<h2>Why Choose <span class="highlight">Prime Arena</span>?</h2>
+<p>We provide the best Free Fire tournament experience in India</p>
+</div>
+<div class="features-grid">
+
+<div class="feature-card">
+<div class="feature-icon">🎮</div>
+<div class="feature-title">Daily Tournaments</div>
+<div class="feature-desc">Play Solo, Duo, and Squad matches every day. 48 players per match with exciting prize pools.</div>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">💰</div>
+<div class="feature-title">Real Cash Prizes</div>
+<div class="feature-desc">Win real money in every match. Prizes credited instantly to your winning balance.</div>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">⚡</div>
+<div class="feature-title">Fast Withdrawals</div>
+<div class="feature-desc">Withdraw your winnings directly to UPI (PhonePe, GPay, Paytm) within 24 hours.</div>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🎁</div>
+<div class="feature-title">Redeem Codes</div>
+<div class="feature-desc">Convert your coins into Free Fire redeem codes easily. Get exclusive in-game rewards.</div>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🛡️</div>
+<div class="feature-title">Anti-Cheat System</div>
+<div class="feature-desc">Report hackers instantly. We take strict action against cheaters. Fair play guaranteed.</div>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">📞</div>
+<div class="feature-title">24/7 Support</div>
+<div class="feature-desc">Get instant help via Telegram, WhatsApp, and Instagram. We're always here for you.</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="trust-section">
+<h2>🛡️ 100% Safe & Secure</h2>
+<p>We use Google Firebase with bank-level encryption. Your data and money are always protected.</p>
+<div class="trust-grid">
+<div class="trust-item">
+<div class="icon">🔒</div>
+<div class="lbl">Encrypted Payments</div>
+</div>
+<div class="trust-item">
+<div class="icon">✅</div>
+<div class="lbl">OTP Verified Users</div>
+</div>
+<div class="trust-item">
+<div class="icon">⚡</div>
+<div class="lbl">Instant Withdrawals</div>
+</div>
+<div class="trust-item">
+<div class="icon">🏆</div>
+<div class="lbl">Fair Gaming</div>
+</div>
+</div>
+</div>
+
+<section class="section" id="how-to">
+<div class="container">
+<div class="section-title">
+<h2>How to <span class="highlight">Install</span>?</h2>
+<p>3 simple steps to start playing and winning</p>
+</div>
+<div class="how-to-grid">
+
+<div class="step-card">
+<div class="step-num">1</div>
+<div class="step-icon">⬇️</div>
+<div class="step-title">Download APK</div>
+<div class="step-desc">Click the download button and install Prime Arena APK on your Android phone.</div>
+</div>
+
+<div class="step-card">
+<div class="step-num">2</div>
+<div class="step-icon">📝</div>
+<div class="step-title">Register</div>
+<div class="step-desc">Create your free account with email and mobile number. Get 10 free coins instantly.</div>
+</div>
+
+<div class="step-card">
+<div class="step-num">3</div>
+<div class="step-icon">🎮</div>
+<div class="step-title">Play & Win</div>
+<div class="step-desc">Join tournaments, compete with players, and win real cash prizes daily!</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+<h2>Ready to <span style="color:#ffa500">Win Big</span>?</h2>
+<p>Join 10,000+ players already winning real cash on Prime Arena</p>
+<a href="prime-arena.apk" download class="btn-download">
+<span>⬇</span> DOWNLOAD NOW
+</a>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="section-title">
+<h2>Get in <span class="highlight">Touch</span></h2>
+<p>Have questions? We're here to help</p>
+</div>
+<div class="contact-grid">
+
+<a href="https://t.me/primearena_official" target="_blank" class="contact-card">
+<div class="contact-icon telegram">✈️</div>
+<div class="contact-name">Telegram</div>
+<div class="contact-desc">@primearena_official</div>
+</a>
+
+<a href="https://instagram.com/primearena_official" target="_blank" class="contact-card">
+<div class="contact-icon instagram">📷</div>
+<div class="contact-name">Instagram</div>
+<div class="contact-desc">@primearena_official</div>
+</a>
+
+<a href="https://wa.me/919999999999" target="_blank" class="contact-card">
+<div class="contact-icon whatsapp">💬</div>
+<div class="contact-name">WhatsApp</div>
+<div class="contact-desc">Chat with Support</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="f-links">
+<a href="https://t.me/primearena_official" target="_blank">Telegram</a>
+<a href="https://instagram.com/primearena_official" target="_blank">Instagram</a>
+<a href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+</div>
+<div class="copy">
+© 2026 Prime Arena. All Rights Reserved.<br>
+Made with ❤️ in India
+</div>
+</div>
+</footer>
+
+</body>
+  </html>
